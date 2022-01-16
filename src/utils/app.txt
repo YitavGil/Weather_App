@@ -1,0 +1,38 @@
+import './App.css';
+import React, {useState} from 'react';
+import axios from 'axios';
+import async from 'hbs/lib/async';
+
+function App() {
+  const [address, setAddress] = useState("")
+
+async function getWeather(e) {
+  e.preventDefault();
+
+  try {
+    await axios.get("http://localhost:9000/weather", {
+      address
+
+    })
+  }
+
+  catch(error) {
+    console.log(error);
+  }
+}
+
+
+
+  return (
+    <div className="App">
+     <h1>Help Me</h1>
+     <form onSubmit={getWeather}>
+      <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
+      <button type='submit'>send</button>
+
+     </form>
+    </div>
+  );
+}
+
+export default App;

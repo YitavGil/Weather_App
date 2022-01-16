@@ -1,0 +1,27 @@
+{
+    "name": "web-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node src/app.js",
+        "dev": "nodemon src/app.js -e js,hbs",
+        "nodemon": "nodemon app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "connect-livereload": "^0.6.1",
+        "cors": "^2.8.5",
+        "express": "^4.17.2",
+        "hbs": "^4.2.0",
+        "livereload": "^0.9.3",
+        "postman-request": "^2.88.1-postman.31",
+        "request": "^2.88.2"
+    },
+    "devDependencies": {
+        "nodemon": "^1.2.0"
+    }
+}
